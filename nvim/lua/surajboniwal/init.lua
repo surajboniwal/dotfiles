@@ -1,1 +1,3 @@
-print("Hello from surajboniwal")
+require("surajboniwal.remap")
+require("surajboniwal.packer")
+require("surajboniwal.set")
