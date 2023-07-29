@@ -1,1 +1,1 @@
-require("surajboniwal")
+require("suraj")

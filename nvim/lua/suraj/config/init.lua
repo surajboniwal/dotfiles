@@ -1,0 +1,6 @@
+require("suraj.config.treesitter")
+require("suraj.config.lualine")
+require("suraj.config.lspconfig")
+require("suraj.config.masonlspconfig")
+require("suraj.config.mason")
+require("suraj.config.nvimcmp")
