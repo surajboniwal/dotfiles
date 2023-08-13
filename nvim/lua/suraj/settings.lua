@@ -15,3 +15,6 @@ cmd.colorscheme "catppuccin-mocha"
 
 o.updatetime = 250
 o.timeoutlen = 300
+
+-- sync clipboard with system
+opt.clipboard = "unnamedplus"
