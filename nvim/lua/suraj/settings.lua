@@ -11,7 +11,7 @@ wo.relativenumber = true
 
 o.scrolloff = 8
 
-cmd.colorscheme "catppuccin-mocha"
+cmd.colorscheme "tokyonight-night"
 
 o.updatetime = 250
 o.timeoutlen = 300
