@@ -1,0 +1,8 @@
+require("svim.config.treesitter")
+require("svim.config.lualine")
+require("svim.config.telescope")
+require("svim.config.whichkey")
+require("svim.config.bufferline")
+require("svim.config.lsp")
+require("svim.config.autopairs")
+require("svim.config.git")

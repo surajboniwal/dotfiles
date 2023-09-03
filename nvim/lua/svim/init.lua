@@ -1,0 +1,5 @@
+require("svim.plugins")
+require("svim.keymaps")
+require("svim.settings")
+require("svim.config")
+require("svim.functions")
