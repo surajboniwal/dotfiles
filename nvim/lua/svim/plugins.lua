@@ -77,9 +77,7 @@ require("lazy").setup({
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     },
-    {
-        "windwp/nvim-autopairs"
-    },
+    "windwp/nvim-autopairs",
     {
         "kylechui/nvim-surround",
         config = function()
@@ -88,10 +86,6 @@ require("lazy").setup({
             })
         end
     },
-    {
-        "lewis6991/gitsigns.nvim",
-    },
-    {
-        'esensar/nvim-dev-container'
-    }
+    "lewis6991/gitsigns.nvim",
+    'aserowy/tmux.nvim',
 }, {})
