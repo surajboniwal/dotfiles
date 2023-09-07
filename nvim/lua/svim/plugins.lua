@@ -91,4 +91,7 @@ require("lazy").setup({
     {
         "lewis6991/gitsigns.nvim",
     },
+    {
+        'esensar/nvim-dev-container'
+    }
 }, {})
