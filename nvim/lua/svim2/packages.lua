@@ -69,4 +69,22 @@ require("lazy").setup({
             { 'L3MON4D3/LuaSnip' },
         }
     },
+    {
+        "nvim-treesitter/nvim-treesitter", 
+        build = ":TSUpdate",
+        opts = {
+        }
+    },
+    {
+        "cohama/lexima.vim",
+    },
+    {
+        'akinsho/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim',
+        },
+        config = true,
+    }
 }, {})
