@@ -1,0 +1,5 @@
+require("svim3.keybinds")
+require("svim3.lazy")
+require("svim3.plugins")
+require("svim3.settings")
+require("svim3.config")
