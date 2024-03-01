@@ -37,9 +37,19 @@ map('n', 'gd', vim.lsp.buf.definition, opts)
 map('n', 'K', vim.lsp.buf.hover, opts)
 map('n', 'gi', vim.lsp.buf.implementation, opts)
 map('n', 'gf', vim.lsp.buf.format, opts)
+map('n', 'ga', vim.lsp.buf.code_action, opts)
+
+-- Cmp
+local cmp = require('cmp')
+map('n', '<C-Space>', cmp.mapping.complete, opts)
 
 -- Telescope
 local builtin = require('telescope.builtin')
 map('n', '<leader>ff', builtin.find_files, {})
 map('n', '<leader>fg', builtin.live_grep, {})
 map('n', '<leader>fb', builtin.buffers, {})
+
+-- Buffer management
+map('n', '<leader>bd', ':bd<CR>')
+map('n', '<leader>bn', ':bn<CR>')
+map('n', '<leader>bp', ':bp<CR>')

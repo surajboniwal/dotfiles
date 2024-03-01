@@ -11,7 +11,8 @@ return {
         dependencies = {
             "hrsh7th/cmp-nvim-lsp"
         },
-        opts = {},
+        opts = {
+        },
         config = function()
             local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

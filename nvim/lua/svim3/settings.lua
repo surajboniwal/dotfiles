@@ -5,6 +5,9 @@ local g = vim.g
 -- Color scheme
 vim.cmd [[colorscheme onedark]]
 
+-- Static gutter width
+vim.cmd [[set signcolumn=yes]]
+
 -- Line numbers
 wo.number = true
 wo.relativenumber = true
