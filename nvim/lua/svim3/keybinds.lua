@@ -42,6 +42,9 @@ map('n', 'ga', vim.lsp.buf.code_action, opts)
 -- Cmp
 local cmp = require('cmp')
 map('n', '<C-Space>', cmp.mapping.complete, opts)
+--map('i', '<Tab>', cmp.mapping.select_next_item, opts)
+--map('i', '<S-Tab>', cmp.mapping.select_prev_item, opts)
+--map('i', '<CR>', cmp.mapping.confirm, opts)
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -51,5 +54,5 @@ map('n', '<leader>fb', builtin.buffers, {})
 
 -- Buffer management
 map('n', '<leader>bd', ':bd<CR>')
-map('n', '<leader>bn', ':bn<CR>')
-map('n', '<leader>bp', ':bp<CR>')
+map('n', '<Tab>', ':bn<CR>')
+map('n', '<S-Tab>', ':bp<CR>')
