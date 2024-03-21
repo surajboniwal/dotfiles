@@ -1,8 +1,8 @@
 #!/bin/sh
 
-NVIMLOC="$HOME/.config/nvim"
-TMUXLOC="$HOME/.tmux.conf"
-BACKUPLOC="$HOME/dotfiles.bak/$(date +%s)"
+NVIMLOC="~/.config/nvim"
+TMUXLOC="~/.tmux.conf"
+BACKUPLOC="~/dotfiles.bak/$(date +%s)"
 
 mkdir -p $BACKUPLOC
 
