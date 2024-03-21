@@ -1,3 +1,5 @@
+#!/bin/sh
+
 NVIMLOC="$HOME/.config/nvim"
 TMUXLOC="$HOME/.tmux.conf"
 BACKUPLOC="$HOME/dotfiles.bak/$(date +%s)"
