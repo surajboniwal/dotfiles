@@ -6,5 +6,6 @@ require("bufferline").setup{
             reveal = {'close'}
         },
         diagnostics = "nvim_lsp"
-    }
+    },
+    opts={}
 }
