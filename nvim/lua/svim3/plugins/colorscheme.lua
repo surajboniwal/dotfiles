@@ -1,3 +1,1 @@
-return {
-    "olimorris/onedarkpro.nvim",
-}
+return { "catppuccin/nvim", name = "catppuccin", priority = 1000 }

@@ -3,7 +3,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- Color scheme
-vim.cmd [[colorscheme onedark]]
+vim.cmd [[colorscheme catppuccin-mocha]]
 
 -- Static gutter width
 vim.cmd [[set signcolumn=yes]]
