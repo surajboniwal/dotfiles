@@ -22,7 +22,7 @@ map("n", "<leader>w", ":w<CR>")
 map("n", "<leader>q", ":q<CR>")
 
 -- Netrw
-map("n", "<leader>e", ":E<CR>")
+map("n", "<leader>e", ":Explore<CR>")
 
 -- Move around splits using Ctrl + {h,j,k,l}
 map('n', '<C-h>', '<C-w>h')

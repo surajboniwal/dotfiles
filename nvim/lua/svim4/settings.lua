@@ -3,7 +3,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- Color scheme
-vim.cmd [[colorscheme kanagawa-dragon]]
+vim.cmd [[colorscheme kanagawa]]
 
 -- Static gutter width
 vim.cmd [[set signcolumn=yes]]
