@@ -1,9 +1,9 @@
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap=true, silent=true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
+    local options = { noremap = true, silent = true }
+    if opts then
+        options = vim.tbl_extend('force', options, opts)
+    end
+    vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- Disable arrow
@@ -15,8 +15,8 @@ map("", "<left>", "<nop>")
 -- Exit insert mode
 map("i", "jk", "<Esc>")
 
--- Save
-map("n", "<leader>w", ":w<CR>")
+-- Save and format
+map("n", "<leader>w", FormatAndSave)
 
 -- Exit
 map("n", "<leader>q", ":q<CR>")
@@ -38,6 +38,7 @@ map('n', 'K', vim.lsp.buf.hover, opts)
 map('n', 'gi', vim.lsp.buf.implementation, opts)
 map('n', 'gf', vim.lsp.buf.format, opts)
 map('n', 'ga', vim.lsp.buf.code_action, opts)
+map('n', 'gr', vim.lsp.buf.references, opts)
 
 -- Cmp
 local cmp = require('cmp')
@@ -56,3 +57,6 @@ map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>bd', ':bd<CR>')
 map('n', '<Tab>', ':bn<CR>')
 map('n', '<S-Tab>', ':bp<CR>')
+
+-- Neorg
+map('n', 'nt', '<Plug>(neorg.qol.todo-items.todo.task-cycle)')
