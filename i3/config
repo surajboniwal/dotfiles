@@ -188,3 +188,5 @@ bindsym $mod+r mode "resize"
 # }
 
 exec --no-startup-id xrandr --output HDMI-1 --mode "2560x1080" --rate 180 --output eDP-1 --off
+
+exec_always --no-startup-id nitrogen --set-auto "dotfiles/wallpapers/1.png"

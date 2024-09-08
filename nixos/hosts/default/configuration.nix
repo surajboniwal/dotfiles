@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -40,20 +41,14 @@
     shell = pkgs.zsh;
     description = "Suraj Boniwal";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    vim
-    neovim
-    git
     home-manager
-    zsh
-    kitty
-    networkmanagerapplet
-    firefox
+    discord
   ];
 
   xdg.portal = {
@@ -68,39 +63,39 @@
   };
 
   services = {
-      openssh.enable = true;
-      xserver = {
-          enable = true;
-          xkb = {
-              layout = "us";
-              variant = "";
-          };
-          desktopManager.xterm.enable = false;
-          windowManager.i3 = {
-              enable = true;
-              extraPackages = with pkgs; [
-                  dmenu
-                      i3status
-                      i3lock
-                      i3blocks
-              ];
-          };
+    openssh.enable = true;
+    xserver = {
+      enable = true;
+      xkb = {
+        layout = "us";
+        variant = "";
       };
-      displayManager = {
-          enable = true;
-          ly.enable = true;
-          defaultSession = "none+i3";
+      desktopManager.xterm.enable = false;
+      windowManager.i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          dmenu
+          i3status
+          i3lock
+          i3blocks
+        ];
       };
-      pipewire = {
-          enable = true;
-          alsa.enable = true;
-          alsa.support32Bit = true;
-          pulse.enable = true;
-          jack.enable = true;
-      }; 
+    };
+    displayManager = {
+      enable = true;
+      ly.enable = true;
+      defaultSession = "none+i3";
+    };
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
   };
 
   security.rtkit.enable = true;
-  
+
   system.stateVersion = "24.05"; # Did you read the comment?
 }
