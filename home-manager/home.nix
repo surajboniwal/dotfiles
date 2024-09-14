@@ -12,6 +12,11 @@
     pavucontrol
     tmux
     nitrogen
+    fira-code-nerdfont
+    luarocks
+    gcc
+    ripgrep
+    xclip
   ];
 
   home.file = {
