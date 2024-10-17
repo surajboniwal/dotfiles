@@ -43,7 +43,7 @@ map('n', 'gr', vim.lsp.buf.references, opts)
 -- Cmp
 local cmp = require('cmp')
 map('n', '<C-Space>', cmp.mapping.complete, opts)
---map('i', '<Tab>', cmp.mapping.select_next_item, opts)
+-- map('i', '<Tab>', cmp.mapping.select_next_item, opts)
 --map('i', '<S-Tab>', cmp.mapping.select_prev_item, opts)
 --map('i', '<CR>', cmp.mapping.confirm, opts)
 
@@ -59,4 +59,6 @@ map('n', '<Tab>', ':bn<CR>')
 map('n', '<S-Tab>', ':bp<CR>')
 
 -- Neorg
-map('n', 'nt', '<Plug>(neorg.qol.todo-items.todo.task-cycle)')
+map('n', 'nj', ':Neorg journal yesterday<CR>')
+map('n', 'nk', ':Neorg journal today<CR>')
+map('n', 'nl', ':Neorg journal tomorrow<CR>')
