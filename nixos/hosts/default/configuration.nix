@@ -49,6 +49,9 @@
   environment.systemPackages = with pkgs; [
     home-manager
     discord
+    vscode
+    ffmpeg
+    geeqie
   ];
 
   xdg.portal = {
@@ -58,7 +61,15 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs = {
+    thunar = { enable = true; };
+    zsh = { enable = true; };
+  };
+
+  powerManagement.cpuFreqGovernor = "performance";
+
   services = {
+    gvfs.enable = true;
     openssh.enable = true;
     xserver = {
       enable = true;
@@ -69,6 +80,9 @@
       desktopManager.xterm.enable = false;
       windowManager.i3 = {
         enable = true;
+
+        package = pkgs.i3-gaps;
+
         extraPackages = with pkgs; [
           dmenu
           i3status
@@ -77,11 +91,13 @@
         ];
       };
     };
+
     displayManager = {
       enable = true;
       ly.enable = true;
       defaultSession = "none+i3";
     };
+
     pipewire = {
       enable = true;
       alsa.enable = true;

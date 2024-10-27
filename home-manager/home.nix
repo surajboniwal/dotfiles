@@ -17,6 +17,14 @@
     gcc
     ripgrep
     xclip
+    unzip
+    openjdk17
+    #openjdk21
+    appimage-run
+    htop
+    polybar
+    chromium
+    vlc
   ];
 
   home.file = {
@@ -41,6 +49,10 @@
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/kitty";
       recursive = true;
     };
+    ".config/polybar" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/polybar";
+      recursive = true;
+    };
   };
 
   home.sessionVariables = {
@@ -62,7 +74,10 @@
       enableCompletion = true;
       oh-my-zsh = {
         enable = true;
-        plugins = [ ];
+        plugins = [
+          "git"
+        ];
+        theme = "cloud";
       };
     };
 
@@ -89,5 +104,4 @@
     };
 
   };
-
 }
