@@ -23,7 +23,8 @@ local modules = {
         config = {
             workspaces = {
                 todos = "~/notes/todo",
-            }
+            },
+            open_last_workspace = true,
         }
     },
 }
